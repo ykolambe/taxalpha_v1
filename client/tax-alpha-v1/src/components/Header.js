@@ -13,16 +13,15 @@ const Header = () => {
             <h3>Services</h3>
             <ArrowDropDownIcon className="arrow"/>
         </div>
-        <div>
-            <h1>     </h1>
-        </div>
+        
       <div className="header__middle">
-        <TextField
+       {/* <TextField
           id="outlined-basic"
           variant="outlined"
           fullWidth
           label="Search"
-        />
+          size="small"
+       /> */}
       </div>
         <div className="header__right">
             <div className='navmenu'>
