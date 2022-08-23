@@ -2,7 +2,8 @@ import React from 'react'
 import "../css/Ad.css";
 import whatsapp from '../WhatsApp.png';
 import email from '../email.png';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import reviews from '../reviews.png';
+
 const Ad = () => {
   return (
     <div className="ad__main">
@@ -11,8 +12,8 @@ const Ad = () => {
            <div className="ad__left__first"><span>and Tax Savings , </span></div>  
            <div className="ad__left__second"><span>Connect With Us On</span></div>
            <div className="contact__logo">
-           <img src={whatsapp} className="whatsapp__img" />
-           <img src={email} className="email__img" />
+           <img src={whatsapp} className="whatsapp__img" alt=""/>
+           <img src={email} className="email__img" alt="" />
             </div>
             <div className="ad__left__third"><span>Or Share Your Contact Below</span></div>
             <div classame="Input" >
@@ -23,21 +24,19 @@ const Ad = () => {
                 value="" 
                 placeholder="Your Mobile Number*" 
                 required="" 
-                aria-required="true" 
-                aria-invalid="false" 
-                maxlength="10" 
-                aria-label="Your Mobile Number*">
+              >
                 </input>
                 <input
                 className="input__button"
                 id="input__button__id"
                 type="submit"
-                aria-required="true" 
-                aria-invalid="false" 
-                maxlength="10" 
-                aria-label="Your Mobile Number*"></input>
+               ></input>
 
             </div>
+        </div>
+        <div className="ad__right">
+          <img src={reviews} alt="" />
+
         </div>
     </div>
   )

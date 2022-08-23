@@ -33,6 +33,10 @@
     background-color:  #ffffff;
     color: #217fbe;
     align-items: center;
+    position: sticky;
+    top:0;
+    z-index: 100;
+  
 }
 
 .navmenu{
