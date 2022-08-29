@@ -1,10 +1,20 @@
 import React from 'react'
 import "../css/Ad.css";
+import Submit from './Submit.js';
 import whatsapp from '../WhatsApp.png';
 import email from '../email.png';
-import reviews from '../reviews.png';
+import referral3 from '../50off.png';
+import referral2 from '../referandearn.png';
+import referral1 from '../referral1.jpg';
+import SimpleImageSlider from "react-simple-image-slider";
+
+const images = [
+   referral1 ,referral2,referral3
+];
 
 const Ad = () => {
+
+  
   return (
     <div className="ad__main">
         <div className="ad__left">
@@ -15,29 +25,25 @@ const Ad = () => {
            <img src={whatsapp} className="whatsapp__img" alt=""/>
            <img src={email} className="email__img" alt="" />
             </div>
-            <div className="ad__left__third"><span>Or Share Your Contact Below</span></div>
-            <div classame="Input" >
-                <input type="tel" 
-                className="input__text"
-                id="input_phone"
-                name="phone" 
-                value="" 
-                placeholder="Your Mobile Number*" 
-                required="" 
-              >
-                </input>
-                <input
-                className="input__button"
-                id="input__button__id"
-                type="submit"
-               ></input>
-
+            
+            <div className="Input" >
+                <Submit />
             </div>
         </div>
-        <div className="ad__right">
-          <img src={reviews} alt="" />
+         <div className="ad__right">
+         <SimpleImageSlider
+        width={700}
+        height={350}
+        images={images}
+        showBullets={true}
+        showNavs={true}
+        slideDuration={2.0}
+        autoPlay={true}
+        style={{  marginTop: '0px', marginBottom: '50px' }}
+      />
+     
 
-        </div>
+  </div> 
     </div>
   )
 }
