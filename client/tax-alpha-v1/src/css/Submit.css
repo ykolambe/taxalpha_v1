@@ -1,0 +1,37 @@
+.submitform{
+    background-color: #217fbe;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.input__button{
+    background-color: #f99c2b;
+    margin: 10px;
+}
+
+.submit_title{
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.input__text{
+   
+    height: 30px;
+    width: 230px;
+    border-radius: 10px;
+    box-shadow: 1px;
+    border-style: solid;
+    margin: 10px;
+    padding-left: 5px;
+  }
+
+  #input_referral_code{
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 1px;
+    border-style: solid;
+    padding-left: 5px;
+  }
+  

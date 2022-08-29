@@ -1,0 +1,14 @@
+.testinomials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+.testinomials__heading{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color:#217fbe ;
+    font-weight: 700;
+}

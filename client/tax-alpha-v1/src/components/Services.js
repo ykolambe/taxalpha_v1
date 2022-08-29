@@ -10,7 +10,7 @@ import ServiceCard from "./ServiceCard.js";
 const Services = () => {
   return (
     <div className="services">
-        <h1>We have range of services for your taxation problems </h1>
+        <p className="services__heading">We have range of services for your taxation problems </p>
         <div className="services__grid">
             <div className="services__grid__ele">
                 <ServiceCard 

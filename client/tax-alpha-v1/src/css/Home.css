@@ -1,3 +1,12 @@
-.header{
- display: block;
+
+
+.accordian__div h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#217fbe;
+    background: -webkit-linear-gradient(30deg, #f99c2b 20%, 
+    #217fbe 70.42%, #3983FB 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
