@@ -74,8 +74,19 @@
   
   .answer {
     background-color: #ffffff;
-    padding: 20px;
-    display: flex;
+    display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  margin-right: 10px;
+  justify-content: space-around;
+  }
+
+
+  .servicecard__text .card__subtitle{
+    font-weight: 400;
+    color:#f99c2b;
+    font-size: 20px;
+    margin-bottom: 15px;
   }
   
   /* activate toggle */
@@ -112,10 +123,25 @@
     color: #fff;
   }
 
+  .accordion_item.active .title {
+    background-color: #217fbe;
+    color: #ffffff;
+    display: block;
+  }
+
+  .accordion_item.active .hoverTitle {
+    background-color: #217fbe;
+    color: #ffffff;
+    display: none;
+  }
+
+  .accordion_item.active .subtitle {
+    background-color: #217fbe;
+    color: #ffffff;
+  }
 
   .accordion_item.active .control {
     background-color: #217fbe;
-    padding-top: 10px;
     color: #ffffff;
   }
 

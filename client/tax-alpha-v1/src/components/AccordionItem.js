@@ -14,6 +14,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const AccordionItem = ({ faq, active, onToggle }) => {
   const { question , answer,  image } = faq;
   
+  const myItems = ["Registration","Application Filing","Obtaining GST Identification Number (GSTN)"];
+
+
   const contentEl = useRef();
   console.log({image})
   return (
@@ -43,31 +46,60 @@ const AccordionItem = ({ faq, active, onToggle }) => {
         <div className="answer">
         <ServiceCard 
                     title="GST Registration"
-                    channel="Registration and
-                    Return Filing"
-                    views ="Starting From"
-                    price="499"
-                    extra="Inclusive of taxes"
+                    subtitle="Obtain GSTN"
+                    included={myItems}
+                    views =""
+                    price="999"
+                    taxes="Inclusive of taxes"
                     image={gst}
                 />
                 <ServiceCard 
-                    title="ITR"
-                    channel="Income Tax
-                    Return Filing"
-                    views ="Starting From"
-                    price="499"
-                    extra="Inclusive of taxes"
+                    title="GST Nil Return"
+                    included={myItems}
+                    subtitle="No Sale, No Purchase"
+                    views =""
+                    price="249 per month"
+                    taxes="Inclusive of Taxes"
                     image={itr}
                 />
                 <ServiceCard 
-                    title="Accounting and
-                    Book Keeping"
-                    channel="Accounting and
-                    Book Keeping
-                    services"
-                    views ="Starting From"
+                    title=" GST Monthly Return"
+                    subtitle="For Normal Dealer"
+                    included={myItems}
+                    views =""
                     price="999"
                     extra="per month"
+                    taxes="Inclusive of Taxes"
+                    image={acc}
+                />
+                <ServiceCard 
+                    title="GST Return"
+                    included={myItems}
+                    subtitle="For Composition Scheme"
+                    views =""
+                    price="749"
+                    extra="per quarter"
+                    taxes="Inclusive of Taxes"
+                    image={acc}
+                />
+                <ServiceCard 
+                    title="GST 9 Annual Return"
+                    included={myItems}
+                    subtitle="For Normal Dealer"
+                    views =""
+                    price="4499"
+                    extra="per annum"
+                    taxes="Inclusive of Taxes"
+                    image={acc}
+                />
+                <ServiceCard 
+                    title=" GST Annual Return"
+                    subtitle="For Composition Dealer"
+                    included={myItems}                   
+                    views =""
+                    price="2999"
+                    extra="per annum" 
+                    taxes="Inclusive of Taxes"
                     image={acc}
                 />
           
