@@ -71,7 +71,14 @@
     color:#217fbe ;
   }
 
-  
+  .accordian__bottom{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      padding-bottom: 10px;
+      width:100%;
+  }
   .answer {
     background-color: #ffffff;
     display: grid;
@@ -79,15 +86,25 @@
   padding: 10px;
   margin-right: 10px;
   justify-content: space-around;
+  width:100%;
   }
 
 
   .servicecard__text .card__subtitle{
     font-weight: 400;
-    color:#f99c2b;
+    color:rgb(176, 118, 11);
     font-size: 20px;
     margin-bottom: 15px;
   }
+
+  .servicecard__text .card__subtitle2{
+    font-weight: 400;
+    color:rgb(176, 118, 11);
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+
   
   /* activate toggle */
   .accordion_item.active .button {
