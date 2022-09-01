@@ -7,6 +7,12 @@
    margin-right: 20px;
    height:100px;
    width:200px;
+
+   @media (max-width: 767px) {
+    height:50px;
+   width:100px;
+  }
+ 
 }
 
 .header__left h3{
@@ -44,6 +50,11 @@
     justify-content: space-around; 
     margin-right: 10px; 
     margin-left: 100px;
+
+    @media (max-width: 767px) {
+        display:align-self ;
+        justify-content: space-around; 
+      }
 }
 
 .header__right{

@@ -31,6 +31,23 @@
     font-weight: 600;
 }
 
+@media only screen and (max-width: 1024px) {
+        .slogan {
+          width: 100%;
+          text-align: center;
+          margin-left: auto;
+        }
+       
+        .pipe{
+            display: none;
+        }
+
+        .accr .aff .aacu {
+            margin:10px;
+        }
+
+}
+
 .pipe{
     font-size:40px;
     font-weight: 100;

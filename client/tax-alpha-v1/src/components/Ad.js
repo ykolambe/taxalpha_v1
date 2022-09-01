@@ -32,6 +32,7 @@ const Ad = () => {
         </div>
          <div className="ad__right">
          <SimpleImageSlider
+         className="slider"
         width={700}
         height={350}
         images={images}

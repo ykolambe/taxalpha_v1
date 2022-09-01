@@ -16,6 +16,7 @@ const Info = () => {
     <div className="info">
         <div className="info__top">
             <SimpleImageSlider
+              className="slider"
                 width="100%"
                 height={450}
                 images={images}
