@@ -181,3 +181,47 @@
   /* .answer_wrapper.open {
     height: auto;
   } */
+
+  @media only screen and (max-width: 1024px) {
+    .buttonImage{
+      width: 100px;
+      height: 50px ;
+      border-radius: 10px;
+    }
+
+    .title{
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 10px;
+      color: #217fbe;
+      margin-left:5px;
+    }
+
+    .subtitle{
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 10px;
+      color: #217fbe;
+    }
+
+    .control{
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 10px;
+      color: #217fbe;
+    }
+
+    .answer {
+      background-color: #ffffff;
+      display: block;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    margin-right: 10px;
+    justify-content: space-around;
+    width:100%;
+    overflow:visible;
+    }
+
+  }
+
+  

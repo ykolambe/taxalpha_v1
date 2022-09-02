@@ -17,7 +17,7 @@ const Accordion = () => {
   return (
     <div className="acc__main">
      
-    <ul className="accordion">
+    <div className="accordion">
       {faqs.map((faq, index) => (
         <AccordionItem
           onToggle={() => handleToggle(index)}
@@ -26,7 +26,7 @@ const Accordion = () => {
           faq={faq}
         />
       ))}
-    </ul>
+    </div>
     </div>
   );
 };

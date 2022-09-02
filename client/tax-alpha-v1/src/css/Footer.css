@@ -12,3 +12,27 @@
     justify-content: space-around;
     color:#217fbe;
 }
+
+@media only screen and (max-width: 1024px) {
+    .footer{
+        display: block;
+    }
+
+    .footer__1  {
+        margin-left: 10px;
+        padding-top: 20px;
+    }
+    .footer__2  {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .footer__3  {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .footer__4  {
+        margin-left: 10px;
+        padding-bottom: 20px;
+    }
+
+}

@@ -79,7 +79,41 @@ padding-top: 10px;
     grid-area: 2/1/3/2;
     margin-bottom: 20px;
     display: flex;
-    justify-content: space-evenly;
-   
+    justify-content: center;
 }
 
+@media only screen and (max-width: 1024px) {
+
+    .ad__right{
+        display: ;
+        overflow:visible;
+    }
+
+    * {
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+
+    .ad__left__first
+{
+    text-align: center;
+}
+
+.ad__left__second
+{
+    text-align: center;
+}
+
+.ad__left__third{
+    text-align: center;
+
+}
+
+.contact__logo{
+    justify-content: center;
+    
+}
+
+
+
+}

@@ -8,7 +8,7 @@ const AccordionItem = ({ faq, active, onToggle }) => {
   const contentEl = useRef();
   console.log({serviceCards})
   return (
-    <li className={`accordion_item ${active ? "active" : ""}`}>
+    <div className={`accordion_item ${active ? "active" : ""}`}>
      
        <div className="button" onClick={onToggle}>
         <div className="button_div" >
@@ -39,7 +39,7 @@ const AccordionItem = ({ faq, active, onToggle }) => {
             
           
       </div>
-    </li>
+    </div>
   );
 };
 
