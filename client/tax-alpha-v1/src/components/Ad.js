@@ -30,7 +30,7 @@ const Ad = () => {
                 <Submit />
             </div>
         </div>
-         <div className="ad__right">
+        {/*<div className="ad__right">
          <SimpleImageSlider
          className="slider"
          width="100%"
@@ -42,9 +42,13 @@ const Ad = () => {
         autoPlay={true}
         style={{  marginTop: '0px', marginBottom: '50px' }}
       />
-     
 
-  </div> 
+
+      
+      </div>
+     */}
+
+  
     </div>
   )
 }
