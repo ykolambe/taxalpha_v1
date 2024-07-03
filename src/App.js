@@ -15,6 +15,11 @@ import DemoProduct from './pages/DemoProduct';
 import {useDocTitle} from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 import About from './pages/About';
+import Category from './pages/Category';
+import AdminLogin from './pages/AdminLogin';
+import Dashboard from './pages/Dashboard';
+import TaxCategory from './pages/TaxCategory';
+import TaxPlans from './pages/TaxPlans';
 
 function App() {
   useEffect(() => {
@@ -31,7 +36,7 @@ function App() {
     });
   }, []);
 
-  useDocTitle("Alpha | Molad e Konsult - Bespoke Web and Mobile Applications");
+  useDocTitle("Tax-Alpha");
 
   return (
 
@@ -42,6 +47,12 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/get-demo" element={<DemoProduct />} /> 
             <Route path="/about" element={<About />} />
+            <Route path="/category/:id" element={<Category />} />
+            <Route path="/admin" element={<AdminLogin />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/taxCategory" element={<TaxCategory />} />
+            <Route path="/taxPlans" element={<TaxPlans />} />
+
 
           </Routes>
         </ScrollToTop>

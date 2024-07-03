@@ -1,11 +1,25 @@
-import React from 'react';
-import img from '../images/web.svg';
-import img2 from '../images/app.svg';
-import img3 from '../images/hosting.svg';
-import img4 from '../images/consultation.svg';
+import React, { useEffect } from 'react';
 import CardComponent from './CardComponent';
+import { getCategories } from '../utils/services';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
+    const [categories, setCategories] = React.useState([]);
+
+    useEffect(() => {
+        fetchCategories();
+
+    }, [])
+
+    const fetchCategories = async () => {
+        await getCategories().then(async (response) => {
+            if (response.data) {
+                setCategories(response.data);
+            } else if (response.error) {
+                setCategories([]);
+            }
+        });
+    }
 
     return (
         <div id="services" className="bg-gray-100 py-12" >
@@ -21,61 +35,14 @@ const Services = () => {
 
                 <div className="px-12" data-aos="fade-down" data-aos-delay="600">
                     <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                        {categories.map((category) => {
+                            return (
+                                <Link to={"/category/" + category._id}>
+                                    <CardComponent itm={category} />
+                                </Link>
+                            )
+                        })}
 
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img} />
-                                <h2 className="font-semibold my-4 text-2xl text-center">GST</h2>
-                                <p className="text-md font-medium">
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img2} />
-                                <h2 className="font-semibold my-4 text-2xl text-center">ITR</h2>
-                                <p className="text-md font-medium">
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">TDS</h2>
-                                <p className="text-md font-medium">
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">Accounting and Book Keeping</h2>
-                                <p className="text-md font-medium">
-                                </p>
-                            </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">Other Registration</h2>
-                                <p className="text-md font-medium">
-                                </p>
-                            </div>
-                        </div>
-                        <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                            <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">Export</h2>
-                                <p className="text-md font-medium">
-                                </p>
-                            </div>
-                        </div>
-
-
-                     <CardComponent />
 
                     </div>
 
